@@ -1,3 +1,5 @@
+/***** ESTILOS PERMANENTES *****/
+
 body{
     margin: 0;
     padding: 0;
@@ -16,12 +18,12 @@ body{
 
 :root {
 
-    /* Paleta de colores */
-    --primary-tono1: #0d1873;
-    --primary-tono2: #0830b6;
-    --secondary-tono1: #04f682;
-    --secondary-tono2: #daff66;
-    --extra-color: #fffbbe;
+    /***** PALETA DE COLORES *****/
+    --primary-tono1: #005954;
+    --primary-tono2: #338b85;
+    --secondary-tono1: #5dc1b9;
+    --secondary-tono2: #9ce0db;
+    --extra-color: #d5ffff;
 }
 
 a {
@@ -35,8 +37,32 @@ header{
     height: 50px;
 }
 
-/*A partir de este tamaño*/
+header .header-icons{
+    position: relative;
+    box-shadow: 0 5px 25px var(--primary-tono1);
+}
+
+/***** NAVBAR *****/
+nav{
+    width: 100%;
+    height: 60px;
+}
+
+/***** MAIN *****/
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/img/Backgrounds/Back2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/***** A partir de este 500px en adelante *****/
 @media screen and (min-width: 500px) {
+
+    /***** HEADER *****/
 
     .header-icons{
         width: 100%;
@@ -49,7 +75,7 @@ header{
         grid-auto-flow: column;
     
         grid-area: 1 / 1 / 1 / 1;
-        background-color: var(--primary-tono2);
+        background-color: var(--secondary-tono1);
     
         grid-template-areas: 
         "vacio iconos"
@@ -61,50 +87,26 @@ header{
     .icons{
         display: grid;
         grid-area: iconos;
-        grid-template-columns: repeat(5, 1fr) ;
+        grid-template-columns: repeat(4, 1fr) ;
         gap: 10px;
     
-        justify-items: end;
+        justify-items: center;
     
     }
     
     .icons a img{
-        width: 30px;
-        height: 30px;
+        width: 27px;
+        height: 27px;
         object-fit: cover;
         filter: drop-shadow(0 2px 5px var(--primary-tono1));
     }
 
 }
 
-/*Pantallas pequeñas*/
-.header-icons .icons{
-    width: 100%;
-    height: 50px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr) ;
 
-    place-content: center;
-    justify-items: center;
-
-    background-color: var(--primary-tono2);
-} 
-
-.icons a img{
-    width: 27px;
-    height: 27px;
-    object-fit: cover;
-    filter: drop-shadow(0 2px 5px var(--primary-tono1));
-}
-
-/***** NAVBAR *****/
-nav{
-    width: 100%;
-    height: 100px;
-}
-
-/*A partir de este tamaño*/
+/***** MENOR A 600PX *****/
 @media screen and (min-width: 500px) {
+    /***** NAVBAR****/
     nav a{
         color: rgb(14, 23, 31);
         font-family: Arial, Helvetica, sans-serif;
@@ -112,12 +114,11 @@ nav{
 
     .nav-container{
         width: 100%;
-        height: auto;
+        height: 60px;
 
         display: grid;
 
         grid-template-columns: 3fr 200px;
-        grid-template-rows: 100px;
 
         grid-template-areas: 
         "logo aboutMe"
@@ -126,7 +127,7 @@ nav{
 
     .nav-logo{
         width: 100%;
-        height: 80%;
+        height: auto;
         margin-left: 10px;
         margin-top: 10px;
 
@@ -138,18 +139,18 @@ nav{
     }
 
     .nav-logo a img{
-        width: 150px;
-        height: 80px;
+        width: 120px;
+        height: 50px;
 
         object-fit: contain;
         filter: drop-shadow(0 2px 5px var(--primary-tono1));
     }
 
 
-    .profile-link{
+    .profile-link {
         width: 100%;
-        height: auto;
-        margin-left: 10px;
+        height: 60px;
+        margin-left: 20px;
 
         display: grid;
         justify-items: center;
@@ -157,22 +158,54 @@ nav{
 
         grid-area: aboutMe;
 
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .profile-link a{
+        width: auto;
+        height: auto;
+        padding: 4px 8px 4px 8px;
+        border-radius: 5px;
+        background-color: var(--extra-color);
+        color: var(--primary-tono2);
+        box-shadow: 0 5px 15px var(--primary-tono1);
     }
 }
 
 
 /*Antes de este tamaño*/
 @media screen and (max-width: 500px) {
+
+    /***** HEADER *****/
+    .header-icons .icons{
+        width: 100%;
+        height: 70px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) ;
+
+        place-content: center;
+        justify-items: center;
+
+        background-color: var(--secondary-tono1);
+    } 
+
+    .icons a img{
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        filter: drop-shadow(5px 3px 5px var(--primary-tono1));
+    }
+
     .profile-link{
         display: none;
     }
+
+    /***** NAVBAR *****/
     .nav-container{
         width: 100%;
-        height: auto;
+        height: 60px;
     
         display: grid;
-    
         grid-template-rows: 100px;
     
         justify-content: center;
@@ -189,11 +222,4 @@ nav{
         object-fit: contain;
     }
 }
-main{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('./assets/img/pexels-kindelmedia-8566540.jpg');
-    background-size: cover;
-    background-position: 0% 0%;
 
-}
