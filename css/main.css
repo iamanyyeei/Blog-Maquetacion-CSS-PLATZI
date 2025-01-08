@@ -52,11 +52,65 @@ nav{
 main{
     width: 100vw;
     height: 100vh;
-    background-image: url('./assets/img/Backgrounds/Back2.jpg');
+    background-image: url('./assets/img/Backgrounds/Back1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-container{
+    width: 65%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "titulo"
+    "boton";
+
+    justify-content: center;
+}
+
+/***** TÍTULO DEL MAIN *****/
+.title-main-container{
+    display: grid;
+    grid-area: titulo;
+    align-items: end;
+}
+
+.title-main-container h1{
+    background-color: var(--primary-tono1);
+    opacity: 0.8;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/***** BOTÓN DEL MAIN *****/
+.button-main-container{
+    display: grid;
+    grid-area: boton;
+    align-items: start;
+    justify-items: center;
+}
+
+.button-main-container button{
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    border: none;
+
+    background-color: var(--extra-color);
+    color: var(--primary-tono2);
+    box-shadow: 0 5px 25px var(--primary-tono1);
+
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /***** A partir de este 500px en adelante *****/
@@ -221,5 +275,11 @@ main{
     
         object-fit: contain;
     }
+
+    /***** TÍTULO DEL MAIN *****/
+    .main-container{
+        width: 75%;
+    }
+    
 }
 
