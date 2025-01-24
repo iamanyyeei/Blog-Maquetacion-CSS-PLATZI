@@ -16,19 +16,24 @@ body{
     margin: 0;
     padding: 0;
 
-    /*Ya no se genera scroll*/
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
     font-size: 62.5%;
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 
+    left: 0;
+    right: 0;
+
+}
+
+.body-blogs{
+    /*Ya no se genera scroll*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 a {
@@ -40,88 +45,24 @@ a {
 /***** HEADER *****/
 header{
     width: 100%;
-    height: 50px;
+    height: 140px;
 }
 
 header .header-icons{
     position: relative;
     box-shadow: 0 5px 25px var(--primary-tono1);
+    width: 100%;
+    height: 70px;
 }
 
 /***** NAVBAR *****/
 nav{
     width: 100%;
-    height: 60px;
+    height: 70px;
+    background-color: var(--primary-tono2);
 }
 
-/***** MAIN *****/
-main{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('./assets/img/Backgrounds/Back1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    display: flex;
-    justify-content: center;
-
-}
-
-.main-container{
-    width: 65%;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "titulo"
-    "boton";
-
-    justify-content: center;
-}
-
-/***** TÍTULO DEL MAIN *****/
-.title-main-container{
-    display: grid;
-    grid-area: titulo;
-    align-items: end;
-}
-
-.title-main-container h1{
-    background-color: var(--primary-tono1);
-    opacity: 0.8;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
-    padding: 10px;
-}
-
-
-/***** BOTÓN DEL MAIN *****/
-.button-main-container{
-    display: grid;
-    grid-area: boton;
-    align-items: start;
-    justify-items: center;
-}
-
-.button-main-container button{
-    padding: 10px 12px 10px 12px;
-    border-radius: 20px;
-    border: none;
-
-    background-color: var(--extra-color);
-    box-shadow: 0 5px 25px var(--primary-tono1);
-
-}
-
-.button-main-container button a{
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-/***** A partir de este 500px en adelante *****/
+/***** A partir de 500px *****/
 @media screen and (min-width: 500px) {
 
     /***** HEADER *****/
@@ -133,7 +74,7 @@ main{
         display: grid;
     
         grid-template-columns: 3fr 1fr;
-        grid-template-rows: 50px;
+        grid-template-rows: auto;
         grid-auto-flow: column;
     
         grid-area: 1 / 1 / 1 / 1;
@@ -142,8 +83,6 @@ main{
         grid-template-areas: 
         "vacio iconos"
         ;
-    
-        align-items: center;
     }
     
     .icons{
@@ -151,18 +90,18 @@ main{
         grid-area: iconos;
         grid-template-columns: repeat(4, 1fr) ;
         gap: 10px;
-    
-        justify-items: center;
-    
+
+        width: 100%;
+        height: auto;
+        place-content: center;
     }
     
     .icons a img{
-        width: 27px;
-        height: 27px;
+        width: 40px;
+        height: 40px;
         object-fit: cover;
         filter: drop-shadow(0 2px 5px var(--primary-tono1));
     }
-
 }
 
 
@@ -176,7 +115,7 @@ main{
 
     .nav-container{
         width: 100%;
-        height: 60px;
+        height: 70px;
 
         display: grid;
 
@@ -190,8 +129,7 @@ main{
     .nav-logo{
         width: 100%;
         height: auto;
-        margin-left: 10px;
-        margin-top: 10px;
+        margin-left: 40px;
 
         display: grid;
         grid-area: logo;
@@ -202,7 +140,7 @@ main{
 
     .nav-logo a img{
         width: 120px;
-        height: 50px;
+        height: 70px;
 
         object-fit: contain;
         filter: drop-shadow(0 2px 5px var(--primary-tono1));
@@ -210,12 +148,12 @@ main{
 
 
     .profile-link {
-        width: 100%;
-        height: 60px;
-        margin-left: 20px;
+        width: auto;
+        height: 70px;
+        padding-right: 20px;
 
         display: grid;
-        justify-items: center;
+        justify-items: end;
         align-items: center;
 
         grid-area: aboutMe;
@@ -225,13 +163,15 @@ main{
     .profile-link a{
         width: auto;
         height: auto;
-        padding: 4px 8px 4px 8px;
+        padding: 10px 16px;
         border-radius: 5px;
+
         background-color: var(--extra-color);
         color: var(--primary-tono2);
         box-shadow: 0 5px 15px var(--primary-tono1);
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 700;
+        
     }
 }
 
@@ -253,8 +193,8 @@ main{
     } 
 
     .icons a img{
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
         object-fit: cover;
         filter: drop-shadow(5px 3px 5px var(--primary-tono1));
     }
@@ -266,21 +206,17 @@ main{
     /***** NAVBAR *****/
     .nav-container{
         width: 100%;
-        height: 60px;
+        height: 70px;
     
         display: grid;
         grid-template-rows: 100px;
     
         justify-content: center;
     }
-    .nav-logo{
-        width: 100%;
-        height: auto;
-    }
     
     .nav-logo a img{
         width: 200px;
-        height: 100px;
+        height: auto;
     
         object-fit: contain;
     }
@@ -290,4 +226,758 @@ main{
         width: 75%;
     }
     
+}
+
+
+
+
+
+/********** ESTILOS DE INDEX.HTML **********/
+
+/***** MAIN *****/
+
+.main-home{
+    background-image: url('./assets/img/Backgrounds/Back1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.main-container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "titulo"
+    "boton";
+
+    justify-content: center;
+}
+
+/***** TÍTULO DEL MAIN *****/
+.title-main-container{
+    display: grid;
+    grid-area: titulo;
+    align-items: end;
+}
+
+.title-main-container h1{
+    background-color: var(--primary-tono1);
+    opacity: 0.8;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/***** BOTÓN DEL MAIN *****/
+.button-main-container{
+    display: grid;
+    grid-area: boton;
+    align-items: start;
+    justify-items: center;
+}
+
+.button-main-container button{
+    padding: 12px 16px;
+    border-radius: 20px;
+    border: none;
+
+    background-color: var(--extra-color);
+    box-shadow: 0 5px 25px var(--primary-tono1);
+}
+
+.button-main-container button a{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*Antes de este tamaño*/
+@media screen and (max-width: 500px) {
+    .title-main-container h1{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+/********** ESTILOS DE BLOGS.HTML **********/
+
+/***** A partir de este 500px en adelante *****/
+@media screen and (min-width: 500px) {
+
+    .main-blogs{
+        width: 100%;
+    }
+
+    /***** CONTIENE 2 COLUMNAS *****/
+    .blogs-container{
+        width: 100%;
+        background-color: aliceblue;
+    }
+
+    .style-blogs-container{
+        width: 80%;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin: auto;
+    }
+
+    /***** COLUMNA 1 *****/
+    .blogs-news{
+        display: grid;
+        grid-template-rows: 50px 1fr;
+    }
+
+    /***** COLUMNA 2*****/
+    .content-news{
+        display: grid;
+        grid-template-rows: 50px min-content min-content min-content;
+    }
+    .subtitle-main-blogs{
+        grid-row: 2;
+    }
+    
+    .subtitle-main-blogs h2{
+        color: var(--primary-tono2);
+        font-size: 1.3rem;
+    }
+    
+    .description-main-blogs{
+        grid-row: 3;
+        text-align: justify;
+        font-size: 1rem;
+    }
+}
+
+/***** COLUMNA - FILA 1*****/ 
+
+.blogs-news .title-news{
+    align-content: center;
+}
+
+.title-news{
+    color: var(--primary-tono1);
+    font-size: 0.9rem;
+}
+
+.blogs-news .image-news{
+    width: 100%;
+}
+
+.image-news img{
+    width: 90%;
+    height: 90%;
+    object-fit: fill;
+    object-position: center;
+    border-radius: 20px;
+}
+
+/***** COLUMNA -FILA 2*****/
+
+.description-button{
+    grid-row: 4;
+}
+
+.description-button button{
+    width: auto;
+    height: auto;
+    padding: 6px 10px;
+
+    border: 2px solid var(--primary-tono2);
+    border-radius: 5px;
+
+
+
+    background-color: transparent;
+    color: var(--primary-tono2);
+    box-shadow: 0 5px 5px var(--extra-color);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*ANTES DE LOS 500PX*/
+@media screen and (max-width: 500px) {
+    /***** MAIN *****/
+    .main-blogs{
+        display: grid;
+    }
+
+    /***** CONTIENE 2 FILAS *****/
+    .style-blogs-container{
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        gap: 10px;
+
+        padding: 0 20px 10px;
+        background-color: aliceblue;
+
+        align-items: center;
+    }
+
+    /***** FILA 1 *****/
+    .blogs-news{
+        display: grid;
+        grid-template-rows: 60px 1fr;
+        grid-row: 1;
+
+        width: 100%;
+    }
+    .title-news{
+        color: var(--primary-tono1);
+        font-size: 1rem;
+    }
+
+    .image-news img{
+        width: 100%;
+        height: 90%;
+        object-fit: fill;
+        object-position: center;
+        border-radius: 20px;
+    }
+
+    /***** FILA 2*****/
+    .content-news{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr;
+
+        grid-row: 2;
+        height: min-content;
+    }
+
+    .subtitle-main-blogs{
+        grid-row: 1;
+        align-content: center;
+    }
+    
+    .subtitle-main-blogs h2{
+        color: var(--primary-tono2);
+        font-size: 1.3rem;
+    }
+    
+    .description-main-blogs{
+        grid-row: 2;
+        text-align: justify;
+    }
+    .description-main-blogs p{
+        font-size: 1rem;
+    }
+    
+    .description-button{
+        margin-top: 20px;
+        grid-row: 3;
+    }
+    .description-button button{
+    
+        font-size: 1rem;
+    }
+}
+
+/********** ESTILOS DE LA GRID POST **********/
+
+.post-container{
+    display: grid;
+    margin-top: 20px;
+}
+
+/***** A partir de este 500px en adelante *****/
+@media screen and (min-width: 900px) {
+    .post-content{
+        width: 80%;
+        margin: auto;
+    }
+
+
+}
+
+/***** A partir de este 500px en adelante *****/
+@media screen and (min-width: 500px) {
+    .post-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        row-gap: 40px;
+        column-gap: 30px;
+    
+        padding: 0 50px 50px;
+        justify-items: center;
+    }
+
+    .post-content .title-container{
+        grid-area: 1 / 1 / 2 / 4;
+    }
+
+}
+
+.title-container h3{
+    font-size: 1rem;
+    color: var(--primary-tono1);
+}
+
+.post-content .title-container{
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    border-bottom: 2px solid var(--secondary-tono1);
+}
+
+
+/*ANTES DE LOS 500PX*/
+@media screen and (max-width: 500px) {
+    .post-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        row-gap: 40px;
+        column-gap: 30px;
+    
+        padding: 0 20px 40px 20px;
+        justify-items: center;
+
+        grid-auto-flow: row;
+    }
+    .post-content .title-container{
+        grid-area: 1 / 1 / 2 / 3;
+        align-self: center;
+    }
+}
+
+.article-content{
+    display: grid;
+    grid-template-rows: 1fr min-content min-content min-content;
+}
+
+.article-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    grid-row: 1;
+}
+
+.article-content p{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.article-content .subtitle-post{
+    font-size: 1rem;
+    color: var(--primary-tono1);
+    font-weight: 700;
+
+    grid-row: 2;
+}
+
+.article-content .description-button{
+    margin-top: 5px;
+    grid-row: 4;
+}
+
+
+
+
+
+/********** ESTILOS DE BLOG.HTML **********/
+
+.img-post-container img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    object-position: center;
+
+    margin: auto;
+}
+
+/***** MAIN IMAGEN PRINCIPAL *****/
+
+@media screen and (min-width: 900px) {
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 190px 30px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 190px;
+    }
+    .info-post-container .article-content p{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 100px 30px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 50px 30px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 50px;
+    }
+
+    .info-post-container .article-content p{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 50px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 50px;
+    }
+
+    .info-post-container .article-content p{
+        font-size: 1rem;
+    }
+}
+
+
+/***** INFO DEL MAIN *****/
+
+.info-post-container h3{
+    font-size: 1.5rem;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--secondary-tono1);
+    color: var(--primary-tono1);
+}
+
+.info-post-container .article-content h1{
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--primary-tono2);
+}
+
+.info-post-container .article-content p{
+    line-height: 30px;
+}
+
+
+/***** CONTACTO *****/
+
+.contact{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.contact-container{
+    width: 80%;
+    height: 120px;
+    margin: auto;
+    padding: 20px 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+
+    align-items: center;
+
+    font-size: 1rem;
+}
+
+.title-contact{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 500px) {
+    /***** LADO IZQUIERDO DE CONTACTO *****/
+    .contact-left{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: min-content 3fr;
+    }
+
+    .contact-left .c-img{
+        grid-column: 1;
+    }
+
+    .c-img{
+        width: 50px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+
+        align-self: center;
+    }
+
+    .contact-left div{
+        grid-column: 2;
+
+        margin-left: 20px;
+        align-content: center;
+    }
+
+    /***** LADO DERECHO DE CONTACTO *****/
+    .contact-right{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        justify-items: end;
+
+    }
+
+    .contact-right .c-img{
+        grid-column: 1;
+        margin-right: 20px;
+    }
+
+    .contact-right div{
+        grid-column: 2;
+    }
+}
+    
+
+@media screen and (max-width: 499px){
+
+    .contact-container{
+        height: 200px;
+    }
+    /***** LADO IZQUIERDO DE CONTACTO *****/
+    .contact-left{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .contact-left .c-img{
+        grid-row: 1;
+    }
+
+    .c-img{
+        width: 50px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+        justify-self: center;
+    }
+
+    .contact-left div{
+        grid-row: 2;
+        text-align: center;
+    }
+
+    /***** LADO DERECHO DE CONTACTO *****/
+    .contact-right{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .contact-right .c-img{
+        grid-row: 1;
+    }
+
+    .contact-right div{
+        grid-row: 2;
+        text-align: center;
+    } 
+    
+}
+
+
+
+
+
+
+/********** FOOTER **********/
+
+footer{
+    width: 100%;
+    height: 100px;
+
+    background-color: var(--primary-tono1);
+
+    border-top: 40px solid var(--secondary-tono1);
+    justify-content: center;
+    align-content: center;
+}
+
+footer p{
+    color: aliceblue;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*ANTES DE LOS 500PX*/
+@media screen and (max-width: 500px) {
+    footer{
+        width: auto;
+        height: 120px;
+        padding: 0 20px;
+    }
+}
+
+
+
+
+
+/********** ESTILOS DE PERFIL.HTML **********/
+
+/***** INFORMACION DEL PERFIL *****/
+
+.main-perfil{
+    width: 100%;
+    height: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background-color: aliceblue;
+}
+.perfil-container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-content: center;
+}
+
+.perfil-container img{
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+
+}
+
+.perfil-info{
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.perfil-info h2{
+    color: var(--primary-tono2);
+    font-size: 1.3rem;
+}
+
+.perfil-info p{
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/*ANTES DE LOS 500PX*/
+@media screen and (max-width: 500px) {
+    .main-perfil{
+        width: 100%;
+        height: auto;
+    }
+    .perfil-container{
+        padding-top: 30px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: auto;
+    
+        align-content: center;
+    }
+    .perfil-container img{
+        grid-row: 1;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+    }
+    
+    .perfil-info{
+        grid-row: 2;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        align-self: center;
+    }
+    
+}
+
+/***** GRILLA DEL PERFIL *****/
+.perfil-grid{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    column-gap: 30px;
+}
+
+.perfil-grid h4{
+    grid-area: 1 / 1 / 2 / 4;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--secondary-tono1);
+    color: var(--primary-tono1);
+}
+
+.perfil-grid article p:first-child{
+    font-size: 1.2rem;
+    color: var(--primary-tono2);
+    font-weight: bold;
+}
+
+.perfil-grid article p:last-child{
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/*ANTES DE LOS 500PX*/
+@media screen and (max-width: 500px) {
+    .perfil-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    
+        column-gap: 20px;
+    }
+    
+    .perfil-grid h4{
+        grid-area: 1 / 1 / 2 / 3;
+    }
 }
