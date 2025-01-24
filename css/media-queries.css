@@ -40,10 +40,7 @@
         object-fit: cover;
         filter: drop-shadow(0 2px 5px var(--primary-tono1));
     }
-}
 
-/***** MENOR A 600PX *****/
-@media screen and (min-width: 500px) {
     /***** NAVBAR****/
     nav a{
         color: rgb(14, 23, 31);
@@ -83,7 +80,6 @@
         filter: drop-shadow(0 2px 5px var(--primary-tono1));
     }
 
-
     .profile-link {
         width: auto;
         height: 70px;
@@ -106,7 +102,7 @@
         background-color: var(--extra-color);
         color: var(--primary-tono2);
         box-shadow: 0 5px 15px var(--primary-tono1);
-        font-size: 1rem;
+        font-size: var(--font-p-or-a);
         font-weight: 700;
         
     }
@@ -161,5 +157,8 @@
     .main-container{
         width: 75%;
     }
-    
+
+    .title-main-container h1{
+        font-size: var(--font-h1);
+    }
 }

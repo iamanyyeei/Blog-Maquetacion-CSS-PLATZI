@@ -12,8 +12,8 @@
 
     /***** TAMAÑO DE FUENTES *****/
 
-    --font-p: 1rem;
-    --font-h1: 1rem;
+    --font-p-or-a: 1rem;
+    --font-h1: 2rem;
     --font-h2: 1rem;
     --font-h3: 1rem;
     --font-h3: 1rem;
@@ -71,6 +71,7 @@ nav{
 }
 
 
+
 /********** ESTILOS DE INDEX.HTML **********/
 
 /***** MAIN *****/
@@ -87,7 +88,6 @@ nav{
 
     width: 100vw;
     height: 100vh;
-
 }
 
 .main-container{
@@ -112,7 +112,7 @@ nav{
     background-color: var(--primary-tono1);
     opacity: 0.8;
     color: white;
-    font-size: 2rem;
+    font-size: var(--font-h1);
     font-weight: 500;
     text-align: center;
     padding: 10px;
@@ -137,17 +137,9 @@ nav{
 }
 
 .button-main-container button a{
-    font-size: 1rem;
+    font-size: var(--font-p-or-a);
     font-weight: bold;
 }
-
-/*Antes de este tamaño*/
-@media screen and (max-width: 500px) {
-    .title-main-container h1{
-        font-size: 1.5rem;
-    }
-}
-
 
 
 
