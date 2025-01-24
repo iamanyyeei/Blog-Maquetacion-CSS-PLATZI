@@ -14,9 +14,11 @@
 
     --font-p-or-a: 1rem;
     --font-h1: 2rem;
-    --font-h2: 1rem;
-    --font-h3: 1rem;
-    --font-h3: 1rem;
+    --font-h2: 1.5rem;
+    --font-h2-min: 1.2rem;
+    --font-h3: 1.1rem;
+    --font-h3-min: 1.3rem;
+    --font-h4: 0.9rem;
 }
 
 /***** ESTILOS PERMANENTES *****/
@@ -143,59 +145,7 @@ nav{
 
 
 
-
 /********** ESTILOS DE BLOGS.HTML **********/
-
-/***** A partir de este 500px en adelante *****/
-@media screen and (min-width: 500px) {
-
-    .main-blogs{
-        width: 100%;
-    }
-
-    /***** CONTIENE 2 COLUMNAS *****/
-    .blogs-container{
-        width: 100%;
-        background-color: aliceblue;
-    }
-
-    .style-blogs-container{
-        width: 80%;
-
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-
-        padding-top: 20px;
-        padding-bottom: 40px;
-        margin: auto;
-    }
-
-    /***** COLUMNA 1 *****/
-    .blogs-news{
-        display: grid;
-        grid-template-rows: 50px 1fr;
-    }
-
-    /***** COLUMNA 2*****/
-    .content-news{
-        display: grid;
-        grid-template-rows: 50px min-content min-content min-content;
-    }
-    .subtitle-main-blogs{
-        grid-row: 2;
-    }
-    
-    .subtitle-main-blogs h2{
-        color: var(--primary-tono2);
-        font-size: 1.3rem;
-    }
-    
-    .description-main-blogs{
-        grid-row: 3;
-        text-align: justify;
-        font-size: 1rem;
-    }
-}
 
 /***** COLUMNA - FILA 1*****/ 
 
@@ -203,9 +153,9 @@ nav{
     align-content: center;
 }
 
-.title-news{
+.title-news h3{
     color: var(--primary-tono1);
-    font-size: 0.9rem;
+    font-size: var(--font-h3);
 }
 
 .blogs-news .image-news{
@@ -213,6 +163,7 @@ nav{
 }
 
 .image-news img{
+    margin-top: 5px;
     width: 90%;
     height: 90%;
     object-fit: fill;
@@ -240,86 +191,11 @@ nav{
     color: var(--primary-tono2);
     box-shadow: 0 5px 5px var(--extra-color);
 
-    font-size: 0.9rem;
+    font-size: var(--font-p-or-a);
     font-weight: 500;
 }
 
-/*ANTES DE LOS 500PX*/
-@media screen and (max-width: 500px) {
-    /***** MAIN *****/
-    .main-blogs{
-        display: grid;
-    }
 
-    /***** CONTIENE 2 FILAS *****/
-    .style-blogs-container{
-        display: grid;
-        grid-template-rows: 1fr min-content;
-        gap: 10px;
-
-        padding: 0 20px 10px;
-        background-color: aliceblue;
-
-        align-items: center;
-    }
-
-    /***** FILA 1 *****/
-    .blogs-news{
-        display: grid;
-        grid-template-rows: 60px 1fr;
-        grid-row: 1;
-
-        width: 100%;
-    }
-    .title-news{
-        color: var(--primary-tono1);
-        font-size: 1rem;
-    }
-
-    .image-news img{
-        width: 100%;
-        height: 90%;
-        object-fit: fill;
-        object-position: center;
-        border-radius: 20px;
-    }
-
-    /***** FILA 2*****/
-    .content-news{
-        display: grid;
-        grid-template-rows: 70px 1fr 1fr;
-
-        grid-row: 2;
-        height: min-content;
-    }
-
-    .subtitle-main-blogs{
-        grid-row: 1;
-        align-content: center;
-    }
-    
-    .subtitle-main-blogs h2{
-        color: var(--primary-tono2);
-        font-size: 1.3rem;
-    }
-    
-    .description-main-blogs{
-        grid-row: 2;
-        text-align: justify;
-    }
-    .description-main-blogs p{
-        font-size: 1rem;
-    }
-    
-    .description-button{
-        margin-top: 20px;
-        grid-row: 3;
-    }
-    .description-button button{
-    
-        font-size: 1rem;
-    }
-}
 
 /********** ESTILOS DE LA GRID POST **********/
 
@@ -328,68 +204,17 @@ nav{
     margin-top: 20px;
 }
 
-/***** A partir de este 500px en adelante *****/
-@media screen and (min-width: 900px) {
-    .post-content{
-        width: 80%;
-        margin: auto;
-    }
-
-
-}
-
-/***** A partir de este 500px en adelante *****/
-@media screen and (min-width: 500px) {
-    .post-content{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        row-gap: 40px;
-        column-gap: 30px;
-    
-        padding: 0 50px 50px;
-        justify-items: center;
-    }
-
-    .post-content .title-container{
-        grid-area: 1 / 1 / 2 / 4;
-    }
-
-}
 
 .title-container h3{
-    font-size: 1rem;
+    font-size: var(--font-h3-min);
     color: var(--primary-tono1);
 }
 
 .post-content .title-container{
     width: 100%;
     height: 100%;
-
     text-align: center;
-
     border-bottom: 2px solid var(--secondary-tono1);
-}
-
-
-/*ANTES DE LOS 500PX*/
-@media screen and (max-width: 500px) {
-    .post-content{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        row-gap: 40px;
-        column-gap: 30px;
-    
-        padding: 0 20px 40px 20px;
-        justify-items: center;
-
-        grid-auto-flow: row;
-    }
-    .post-content .title-container{
-        grid-area: 1 / 1 / 2 / 3;
-        align-self: center;
-    }
 }
 
 .article-content{
@@ -409,11 +234,11 @@ nav{
 
 .article-content p{
     text-align: justify;
-    font-size: 1rem;
+    font-size: var(--font-p-or-a);
 }
 
 .article-content .subtitle-post{
-    font-size: 1rem;
+    font-size: var(--font-p-or-a);
     color: var(--primary-tono1);
     font-weight: 700;
 

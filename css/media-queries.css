@@ -106,6 +106,70 @@
         font-weight: 700;
         
     }
+
+    /***** MAIN *****/
+
+    .main-blogs{
+        width: 100%;
+    }
+
+    /***** CONTIENE 2 COLUMNAS *****/
+    .blogs-container{
+        width: 100%;
+        background-color: aliceblue;
+    }
+
+    .style-blogs-container{
+        width: 80%;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin: auto;
+    }
+
+    /***** COLUMNA 1 *****/
+    .blogs-news{
+        display: grid;
+        grid-template-rows: 50px 1fr;
+    }
+
+    /***** COLUMNA 2*****/
+    .content-news{
+        display: grid;
+        grid-template-rows: 50px min-content min-content min-content;
+    }
+    .subtitle-main-blogs{
+        grid-row: 2;
+    }
+    
+    .subtitle-main-blogs h2{
+        color: var(--primary-tono2);
+        font-size: var(--font-h2);
+    }
+    
+    .description-main-blogs{
+        grid-row: 3;
+        text-align: justify;
+        font-size: var(--font-p-or-a);
+    }
+
+    .post-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        row-gap: 40px;
+        column-gap: 30px;
+    
+        padding: 0 50px 50px;
+        justify-items: center;
+    }
+
+    .post-content .title-container{
+        grid-area: 1 / 1 / 2 / 4;
+    }
 }
 
 /*Antes de este tamaño*/
@@ -160,5 +224,109 @@
 
     .title-main-container h1{
         font-size: var(--font-h1);
+    }
+
+    /***** MAIN *****/
+    .main-blogs{
+        display: grid;
+    }
+
+    /***** CONTIENE 2 FILAS *****/
+    .style-blogs-container{
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        gap: 10px;
+
+        padding: 0 20px 10px;
+        background-color: aliceblue;
+
+        align-items: center;
+    }
+
+    /***** FILA 1 *****/
+    .blogs-news{
+        display: grid;
+        grid-template-rows: 60px 1fr;
+        grid-row: 1;
+
+        width: 100%;
+    }
+    .title-news{
+        color: var(--primary-tono1);
+        font-size: var(--font-h3);
+    }
+
+    .image-news img{
+        width: 100%;
+        height: 90%;
+        object-fit: fill;
+        object-position: center;
+        border-radius: 20px;
+    }
+
+    /***** FILA 2*****/
+    .content-news{
+        display: grid;
+        grid-template-rows: 80px 1fr 1fr;
+
+        grid-row: 2;
+        height: min-content;
+    }
+
+    .subtitle-main-blogs{
+        grid-row: 1;
+        align-content: center;
+    }
+    
+    .subtitle-main-blogs h2{
+        color: var(--primary-tono2);
+        font-size: var(--font-h2-min);
+        padding-bottom: 20px;
+    }
+    
+    .description-main-blogs{
+        grid-row: 2;
+        text-align: justify;
+    }
+    .description-main-blogs p{
+        font-size: var(--font-p-or-a);
+    }
+    
+    .description-button{
+        margin-top: 20px;
+        grid-row: 3;
+    }
+    .description-button button{
+    
+        font-size: var(--font-p-or-a);
+    }
+
+    .post-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        row-gap: 40px;
+        column-gap: 30px;
+    
+        padding: 0 20px 40px 20px;
+        justify-items: center;
+
+        grid-auto-flow: row;
+    }
+    .post-content .title-container{
+        grid-area: 1 / 1 / 2 / 3;
+        align-self: center;
+    }
+}
+
+
+
+/********** ESTILOS DE LA GRID POST **********/
+
+/***** A partir de este 900px en adelante *****/
+@media screen and (min-width: 900px) {
+    .post-content{
+        width: 80%;
+        margin: auto;
     }
 }
