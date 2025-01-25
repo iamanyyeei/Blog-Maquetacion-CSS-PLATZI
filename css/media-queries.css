@@ -170,6 +170,103 @@
     .post-content .title-container{
         grid-area: 1 / 1 / 2 / 4;
     }
+
+    /***** LADO IZQUIERDO DE CONTACTO *****/
+    .contact-left{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: min-content 3fr;
+    }
+
+    .contact-left .c-img{
+        grid-column: 1;
+    }
+
+    .c-img{
+        width: 50px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+
+        align-self: center;
+    }
+
+    .contact-left div{
+        grid-column: 2;
+
+        margin-left: 20px;
+        align-content: center;
+    }
+
+    /***** LADO DERECHO DE CONTACTO *****/
+    .contact-right{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        justify-items: end;
+
+    }
+
+    .contact-right .c-img{
+        grid-column: 1;
+        margin-right: 20px;
+    }
+
+    .contact-right div{
+        grid-column: 2;
+    }
+}
+
+@media screen and (max-width: 499px){
+
+    .contact-container{
+        height: 200px;
+    }
+    /***** LADO IZQUIERDO DE CONTACTO *****/
+    .contact-left{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .contact-left .c-img{
+        grid-row: 1;
+    }
+
+    .c-img{
+        width: 50px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+        justify-self: center;
+    }
+
+    .contact-left div{
+        grid-row: 2;
+        text-align: center;
+    }
+
+    /***** LADO DERECHO DE CONTACTO *****/
+    .contact-right{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .contact-right .c-img{
+        grid-row: 1;
+    }
+
+    .contact-right div{
+        grid-row: 2;
+        text-align: center;
+    } 
+    
 }
 
 /*Antes de este tamaño*/
@@ -317,6 +414,27 @@
         grid-area: 1 / 1 / 2 / 3;
         align-self: center;
     }
+
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 50px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 50px;
+    }
+
+    .info-post-container .article-content p{
+        font-size: var(--font-p-or-a);
+    }
+
+    /********** FOOTER **********/
+
+    footer{
+        width: auto;
+        height: 120px;
+        padding: 0 20px;
+    }
 }
 
 
@@ -328,5 +446,51 @@
     .post-content{
         width: 80%;
         margin: auto;
+    }
+}
+
+
+
+/********** ESTILOS DE BLOG.HTML **********/
+
+/***** MAIN IMAGEN PRINCIPAL *****/
+
+@media screen and (min-width: 900px) {
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 190px 30px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 190px;
+    }
+    .info-post-container .article-content p{
+        font-size: var(--font-p-or-a-max);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 100px 30px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /***** MAIN IMAGEN PRINCIPAL *****/
+    .img-post-container{
+        padding: 0 50px 30px;
+    }
+    /***** INFO DEL MAIN *****/
+    .info-post-container{
+        padding: 0 50px;
+    }
+
+    .info-post-container .article-content p{
+        font-size: var(--font-p-or-a-max);
     }
 }
