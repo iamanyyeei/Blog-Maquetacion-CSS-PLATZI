@@ -159,14 +159,11 @@
     }
 
 
-    /*Validado hasta aqui*/
-
-    /***** LADO IZQUIERDO DE CONTACTO *****/
+    /***** LADO IZQUIERDO DE CONTACTO VALIDADO ✅ *****/
     .contact-left{
         width: 100%;
         height: auto;
-        display: grid;
-        grid-template-columns: min-content 3fr;
+        display: flex;
     }
 
     .contact-left .c-img{
@@ -190,22 +187,19 @@
         align-content: center;
     }
 
-    /***** LADO DERECHO DE CONTACTO *****/
+    /***** LADO DERECHO DE CONTACTO VALIDADO ✅ *****/
     .contact-right{
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-
-        justify-items: end;
+        display: flex;
 
     }
 
     .contact-right .c-img{
         grid-column: 1;
-        margin-right: 20px;
     }
 
     .contact-right div{
+        margin-left: 20px;
         grid-column: 2;
     }
 }
@@ -213,14 +207,15 @@
 @media screen and (max-width: 499px){
 
     .contact-container{
-        height: 200px;
+        height: 220px;
     }
-    /***** LADO IZQUIERDO DE CONTACTO *****/
+    /***** LADO IZQUIERDO DE CONTACTO VALIDADO ✅ *****/
     .contact-left{
         width: 100%;
         height: auto;
         display: grid;
         grid-template-rows: 1fr 2fr;
+        place-items: center;
     }
 
     .contact-left .c-img{
@@ -241,11 +236,13 @@
         text-align: center;
     }
 
-    /***** LADO DERECHO DE CONTACTO *****/
+    /***** LADO DERECHO DE CONTACTO VALIDADO ✅ *****/
     .contact-right{
         width: 100%;
+        height: auto;
         display: grid;
         grid-template-rows: 1fr 2fr;
+        place-items: center;
     }
 
     .contact-right .c-img{
@@ -400,13 +397,11 @@
         align-self: center;
     }
 
-    /*Validado hasta aqui*/
-
-    /***** MAIN IMAGEN PRINCIPAL *****/
+    /***** MAIN IMAGEN PRINCIPAL VALIDADO ✅ ****/
     .img-post-container{
         padding: 0 50px;
     }
-    /***** INFO DEL MAIN *****/
+    /***** INFO DEL MAIN VALIDADO ✅ *****/
     .info-post-container{
         padding: 0 50px;
     }
@@ -425,7 +420,6 @@
 }
 
 
-
 /********** ESTILOS DE LA GRID POST VALIDADO ✅  **********/
 
 /***** A partir de este 900px en adelante *****/
@@ -437,17 +431,16 @@
 }
 
 
+/********** ESTILOS DE BLOG.HTML VALIDADO ✅ **********/
 
-/********** ESTILOS DE BLOG.HTML **********/
-
-/***** MAIN IMAGEN PRINCIPAL *****/
+/***** MAIN IMAGEN PRINCIPAL VALIDADO ✅ *****/
 
 @media screen and (min-width: 900px) {
     /***** MAIN IMAGEN PRINCIPAL *****/
     .img-post-container{
         padding: 0 190px 30px;
     }
-    /***** INFO DEL MAIN *****/
+    /***** INFO DEL MAIN VALIDADO ✅ *****/
     .info-post-container{
         padding: 0 190px;
     }
@@ -457,22 +450,22 @@
 }
 
 @media screen and (max-width: 900px) {
-    /***** MAIN IMAGEN PRINCIPAL *****/
+    /***** MAIN IMAGEN PRINCIPAL VALIDADO ✅ *****/
     .img-post-container{
         padding: 0 100px 30px;
     }
-    /***** INFO DEL MAIN *****/
+    /***** INFO DEL MAIN VALIDADO ✅ *****/
     .info-post-container{
         padding: 0 100px;
     }
 }
 
 @media screen and (max-width: 700px) {
-    /***** MAIN IMAGEN PRINCIPAL *****/
+    /***** MAIN IMAGEN PRINCIPAL VALIDADO ✅ *****/
     .img-post-container{
         padding: 0 50px 30px;
     }
-    /***** INFO DEL MAIN *****/
+    /***** INFO DEL MAIN VALIDADO ✅ *****/
     .info-post-container{
         padding: 0 50px;
     }
