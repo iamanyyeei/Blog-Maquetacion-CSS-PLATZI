@@ -104,7 +104,7 @@
         
     }
 
-    /********** ESTILOS DE BLOGS.HTML **********/
+    /********** ESTILOS DE BLOGS.HTML VALIDADO ✅ **********/
 
     .style-blogs-container{
         width: 80%;
@@ -143,8 +143,6 @@
         font-size: var(--font-p-or-a);
     }
 
-    /*Validado hasta aqui*/
-
     .post-content{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -159,6 +157,9 @@
     .post-content .title-container{
         grid-area: 1 / 1 / 2 / 4;
     }
+
+
+    /*Validado hasta aqui*/
 
     /***** LADO IZQUIERDO DE CONTACTO *****/
     .contact-left{
@@ -382,8 +383,6 @@
         font-size: var(--font-p-or-a);
     }
 
-    /*Validado hasta aqui*/
-
     .post-content{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -401,6 +400,8 @@
         align-self: center;
     }
 
+    /*Validado hasta aqui*/
+
     /***** MAIN IMAGEN PRINCIPAL *****/
     .img-post-container{
         padding: 0 50px;
@@ -414,7 +415,7 @@
         font-size: var(--font-p-or-a);
     }
 
-    /********** FOOTER **********/
+    /********** FOOTER VALIDADO ✅ **********/
 
     footer{
         width: auto;
@@ -425,7 +426,7 @@
 
 
 
-/********** ESTILOS DE LA GRID POST **********/
+/********** ESTILOS DE LA GRID POST VALIDADO ✅  **********/
 
 /***** A partir de este 900px en adelante *****/
 @media screen and (min-width: 900px) {
