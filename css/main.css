@@ -146,7 +146,7 @@ nav{
 
 /********** ESTILOS DE BLOGS.HTML **********/
 
-/***** COLUMNA - FILA 1*****/ 
+/***** COLUMNA - FILA 1 VALIDADO ✅ *****/ 
 
 .blogs-news .title-news{
     align-content: center;
@@ -170,7 +170,7 @@ nav{
     border-radius: 20px;
 }
 
-/***** COLUMNA -FILA 2*****/
+/***** COLUMNA -FILA 2 VALIDADO ✅ *****/
 
 .description-button{
     grid-row: 4;
@@ -184,8 +184,6 @@ nav{
     border: 2px solid var(--primary-tono2);
     border-radius: 5px;
 
-
-
     background-color: transparent;
     color: var(--primary-tono2);
     box-shadow: 0 5px 5px var(--extra-color);
@@ -194,7 +192,7 @@ nav{
     font-weight: 500;
 }
 
-
+/*Validado hasta aqui*/
 
 /********** ESTILOS DE LA GRID POST **********/
 
