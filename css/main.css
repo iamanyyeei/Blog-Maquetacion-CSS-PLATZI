@@ -15,6 +15,7 @@
     --font-p-or-a: 1rem;
     --font-p-or-a-max: 1.3rem;
     --font-h1: 2rem;
+    --font-h1-min: 1.6rem;
     --font-h2: 1.5rem;
     --font-h2-min: 1.2rem;
     --font-h3: 1.1rem;
@@ -75,7 +76,7 @@ nav{
 
 /********** ESTILOS DE INDEX.HTML **********/
 
-/***** MAIN *****/
+/***** MAIN VALIDADO ✅  *****/
 
 .main-home{
     background-image: url('./assets/img/Backgrounds/Back1.jpg');
@@ -99,7 +100,7 @@ nav{
     "titulo"
     "boton";
 
-    justify-content: center;
+    justify-items: center;
 }
 
 /***** TÍTULO DEL MAIN *****/
@@ -107,6 +108,7 @@ nav{
     display: grid;
     grid-area: titulo;
     align-items: end;
+    margin: 0 24px;
 }
 
 .title-main-container h1{
@@ -141,8 +143,6 @@ nav{
     font-size: var(--font-p-or-a);
     font-weight: bold;
 }
-
-
 
 /********** ESTILOS DE BLOGS.HTML **********/
 
