@@ -12,14 +12,12 @@
         display: grid;
     
         grid-template-columns: 3fr 1fr;
-        grid-template-rows: auto;
         grid-auto-flow: column;
     
-        grid-area: 1 / 1 / 1 / 1;
         background-color: var(--secondary-tono1);
     
         grid-template-areas: 
-        "vacio iconos"
+        ". iconos"
         ;
     }
     
@@ -31,7 +29,7 @@
 
         width: 100%;
         height: auto;
-        place-content: center;
+        place-items: center;
     }
     
     .icons a img{
@@ -279,8 +277,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr) ;
 
-        place-content: center;
-        justify-items: center;
+        place-items: center;
 
         background-color: var(--secondary-tono1);
     } 
