@@ -336,36 +336,34 @@ footer a{
 
 .main-perfil{
     width: 100%;
-    height: 300px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    height: 400px;
+    padding: 20px 0;
 
     background-color: aliceblue;
 }
 .perfil-container{
-    width: 80%;
+    width: 70%;
     height: 100%;
     margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    align-content: center;
 }
 
 .perfil-container img{
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 350px;
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
-
+    align-self: center;
 }
 
 .perfil-info{
     width: 100%;
     height: auto;
     align-self: center;
+    margin-left: 30px;
 }
 
 .perfil-info h2{
@@ -445,6 +443,7 @@ footer a{
     font-size: 1rem;
     text-align: justify;
 }
+
 
 /*ANTES DE LOS 500PX*/
 @media screen and (max-width: 500px) {
